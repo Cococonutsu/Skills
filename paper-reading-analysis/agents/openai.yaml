@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Reading Analysis"
+  short_description: "精读、拆解并分析学术论文"
+  default_prompt: "Use $paper-reading-analysis to read this paper and summarize its direction, motivation, contributions, method, evidence, and limitations in Chinese Markdown."
+
+policy:
+  allow_implicit_invocation: true
