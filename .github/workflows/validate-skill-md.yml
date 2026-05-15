@@ -1,0 +1,35 @@
+name: Validate skill markdown files
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-skill-md:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check SKILL.md frontmatter encoding
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import sys
+
+          bad = []
+          files = sorted(Path(".").rglob("SKILL.md"))
+          for path in files:
+              data = path.read_bytes()
+              if data.startswith(b"\xef\xbb\xbf"):
+                  bad.append(f"{path}: UTF-8 BOM present; save as UTF-8 without BOM")
+              elif not data.startswith(b"---"):
+                  bad.append(f"{path}: does not start with YAML frontmatter ---")
+
+          if bad:
+              print("\n".join(bad))
+              sys.exit(1)
+
+          print(f"Checked {len(files)} SKILL.md files; all start with --- and have no BOM.")
+          PY
