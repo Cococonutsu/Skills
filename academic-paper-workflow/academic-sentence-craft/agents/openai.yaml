@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Sentence Craft"
+  short_description: "Sentence-level English craft for academic papers"
+  default_prompt: "Use $academic-sentence-craft to revise these academic-paper sentences for clearer sentence logic and stronger English expression."
