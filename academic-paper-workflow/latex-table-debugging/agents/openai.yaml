@@ -1,0 +1,6 @@
+interface:
+  display_name: "LaTeX Table Debugging"
+  short_description: "Reason about LaTeX table composition"
+  default_prompt: "Use $latex-table-debugging to diagnose and repair LaTeX table composition issues."
+policy:
+  allow_implicit_invocation: true

@@ -7,5 +7,6 @@ This folder groups complementary skills for writing, auditing, compiling, and an
 - `paper-reading-analysis`: paper reading and analysis for AI research papers, including motivation, research gap, contributions, methods, experiments, evidence, limitations, and reusable writing patterns.
 - `paper-audit`: reviewer-style submission gate for paper drafts, with emphasis on major risks, missing evidence, experiment gaps, and revision priorities.
 - `latex-paper-en`: source-aware English LaTeX paper assistant for compilation, venue formatting, citations, tables, algorithms, and manuscript polishing.
+- `latex-table-debugging`: LaTeX table diagnosis and repair for fragile table layouts, including row/column color, multirow/multicolumn spans, citations, line breaks, scaling, and package interactions.
 
-A typical workflow is: read strong papers first, extract how they frame the problem and evidence, refine the paper-level argument next, audit the draft as a reviewer, fix source-level LaTeX and citation issues, and polish individual sentences last.
+A typical workflow is: read strong papers first, extract how they frame the problem and evidence, refine the paper-level argument next, audit the draft as a reviewer, fix source-level LaTeX and citation issues, repair fragile table layouts when needed, and polish individual sentences last.
