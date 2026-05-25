@@ -1,6 +1,8 @@
 ---
 name: research-paper-writing
-description: Content-level research paper writing coach for ML/CV/NLP-style manuscripts, focused on paper story, section logic, paragraph flow, claim-evidence alignment, and reviewer-facing presentation. Use when the user asks to draft, rewrite, or reason about Abstract, Introduction, Related Work, Method, Experiments, Conclusion, figures/tables, or paper narrative without needing source-aware LaTeX/Typst compilation, formatting, citation verification, or submission-gate review. Prefer format-specific skills such as latex-paper-en, typst-paper, or latex-thesis-zh when an existing .tex/.typ thesis or paper project is present and the task involves source files, build errors, venue formatting, bibliography, labels, macros, or syntax preservation. Prefer paper-audit when the user wants reviewer-style critique, pass/fail readiness, peer-review reports, or blocker triage rather than direct rewriting.
+description: Content-level research paper writing coach for ML/CV/NLP manuscripts. Use for paper story, section logic, paragraph flow, claim-evidence alignment, Abstract/Introduction/Related Work/Method/Experiments/Conclusion drafting or rewriting, and reviewer-facing presentation when the task does not require source-aware LaTeX/Typst compilation, formatting, citation checks, or submission-gate review.
+metadata:
+  short-description: Paper story, section logic, and paragraph-level academic writing
 ---
 # Research Paper Writing
 

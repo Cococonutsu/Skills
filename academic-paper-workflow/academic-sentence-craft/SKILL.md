@@ -1,6 +1,6 @@
 ---
 name: academic-sentence-craft
-description: Sentence-level English academic writing craft for research papers. Use when Codex needs to diagnose, teach, or revise awkward academic-paper sentences, sentence logic, subject-verb choice, clause placement, information packaging, result sentences, contribution sentences, gap sentences, comparison sentences, or non-native English phrasing. Especially useful when the user says a sentence feels unnatural, asks how to write better academic English sentences, wants reusable sentence patterns from strong papers, or needs prose that reads like ML/CV/NLP conference writing. Do not use as the primary skill for paper story/section logic, reviewer argument design, LaTeX compilation, venue formatting, citation checks, or broad submission review.
+description: Sentence-level English academic writing craft for research papers. Use when Codex needs to diagnose, teach, or revise awkward academic-paper sentences, sentence logic, academic verb choice, subject-verb pairing, clause placement, information packaging, result sentences, contribution sentences, gap sentences, comparison sentences, or non-native English phrasing. Especially useful when the user says a sentence feels unnatural, asks which verb to use in a paper, asks how to write better academic English sentences, wants reusable sentence patterns from strong papers, or needs prose that reads like ML/CV/NLP conference writing. Do not use as the primary skill for paper story/section logic, reviewer argument design, LaTeX compilation, venue formatting, citation checks, or broad submission review.
 ---
 
 # Academic Sentence Craft
@@ -19,6 +19,7 @@ Use this skill for:
 - Explaining why a sentence feels unnatural even when grammar is technically correct.
 - Turning literal translation, loose academic prose, or AI-like phrasing into precise research prose.
 - Producing reusable sentence patterns by function: problem, gap, contribution, method, result, interpretation, comparison, limitation, and conclusion.
+- Choosing precise academic verbs and research terms for different sentence functions, such as `introduce`, `evaluate`, `isolate`, `reveal`, `suggest`, `validate`, `highlight`, `recover`, `generalize`, and `transfer`.
 - Teaching sentence-level academic writing through before/after examples and compact rules.
 
 Prefer other skills when the request is mainly about:
@@ -66,6 +67,8 @@ Use the sentence function to choose the default structure:
 - Conclusion sentence: `These findings suggest that X, but Y remains unresolved`.
 
 For detailed patterns and anti-patterns, load `references/sentence-patterns.md`.
+
+For academic verb selection by paper stage and sentence function, load `references/academic-verbs.md`.
 
 ## Diagnostic Labels
 
@@ -122,3 +125,5 @@ For teaching requests, group patterns by sentence function and include one natur
 ## Reference
 
 Load `references/sentence-patterns.md` when the task asks for reusable templates, broad sentence-level teaching, or a systematic rewrite across many sentence functions.
+
+Load `references/academic-verbs.md` when the task asks which verb or research term to use, when a draft overuses weak verbs such as `show`, `test`, `use`, `make`, or `give`, when the task asks for wording choices such as `generalization` versus `transfer`, or when revising result, contribution, experiment, related-work, method, analysis, conclusion, or limitation sentences for more precise academic expression.
