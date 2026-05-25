@@ -1,0 +1,7 @@
+interface:
+  display_name: "Coconut Explanation Style"
+  short_description: "Answer with clear boundaries and examples"
+  default_prompt: "Use $coconut-explanation-style to answer my question with clear boundaries, causal order, and minimal examples."
+
+policy:
+  allow_implicit_invocation: true
