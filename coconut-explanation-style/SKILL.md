@@ -24,6 +24,18 @@ Prefer this structure for non-trivial questions:
 
 For tiny questions, compress the structure instead of forcing headings, but still preserve conclusion, reason, and boundary.
 
+## Visualization Requests
+
+When the user asks for visualization, make a visual artifact instead of only giving prose or a Markdown-style outline. Prefer a self-contained HTML file when the topic involves relationships, workflows, comparisons, changing parameters, formulas, schedules, or interactive intuition.
+
+If using HTML:
+
+- Use HTML's strengths: diagrams, cards, tables, timelines, state panels, sliders, toggles, buttons, tabs, or small JavaScript demos that let the user change a value and see the mechanism update.
+- Do not merely render Markdown as HTML with long bullet lists. Convert the explanation into a visual model, such as a flow graph, cause-effect pipeline, comparison matrix, or interactive parameter demo.
+- Keep the same explanation discipline: conclusion first, then mechanism, boundary, minimal example, and next step.
+- Keep labels concise and avoid decorative complexity. Interactivity should teach one mechanism at a time.
+- Save the HTML artifact to the requested folder, or to a sensible workspace path when no target is given, and report the exact path.
+
 ## User Model
 
 Assume the user:
