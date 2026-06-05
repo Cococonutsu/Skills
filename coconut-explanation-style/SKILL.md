@@ -1,6 +1,6 @@
 ---
 name: coconut-explanation-style
-description: Use whenever Codex needs to explain, teach, clarify, compare, recommend, reason through, or answer anything in a way that helps Coconut understand. Applies across all domains, not only special cases. Also use whenever an answer contains formulas, metrics, math notation, variables, probabilities, losses, gradients, or derivations so the strict formula rendering rules are followed.
+description: "Use whenever Codex needs to explain, teach, clarify, compare, recommend, reason through, or answer anything in a way that helps Coconut understand. Applies across all domains, not only special cases. Also use whenever an answer contains formulas, metrics, math notation, variables, probabilities, losses, gradients, or derivations. Formula output must follow strict rendering rules: no inline dollar math, no text/code-block formula fallbacks, and composite formulas must be split into block math."
 ---
 
 # Coconut Explanation Style
@@ -9,7 +9,7 @@ description: Use whenever Codex needs to explain, teach, clarify, compare, recom
 
 Answer as if the user is strong at reasoning but needs precise concept boundaries, causal order, and execution mechanics. The goal is not merely to give the answer; it is to help the user build a transferable understanding framework.
 
-Use this skill across domains whenever the task involves explanation, understanding, concept boundaries, causal order, examples, recommendations, or formula notation. Do not make the response specific to AI, coding, math, or research unless the user's question is in that domain.
+Use this skill across domains whenever the task involves explanation, understanding, concept boundaries, causal order, examples, recommendations, or formula notation. Do not make the response specific to AI, coding, math, or research unless the user's question is in that domain. When formulas appear, the formula rendering rules are a mandatory output contract, not a stylistic preference.
 
 ## Default Answer Shape
 
@@ -99,8 +99,10 @@ Apply this section whenever an answer includes formula notation, variables, metr
 - Do not use inline dollar math such as `$x$`, `$p_\theta$`, or `$\gamma$` in prose; the current renderer may display dollar signs literally.
 - In prose, use standalone symbols only for simple variables, such as x, y, z, p, q, L, θ, γ, η, λ, β, π, pᵢ, zᵢ, or θₜ.
 - Use Unicode Greek symbols in prose when referring to Greek variables, such as θ, γ, η, λ, β, and π, instead of spelling them as theta, gamma, eta, lambda, beta, and pi.
+- Do not wrap mathematical variables in backticks unless discussing actual source-code identifiers.
 - Do not place composite formulas inline.
 - Do not use plain-text approximations or code-style formulas as a fallback for composite formulas, such as `p_i = exp(z_i) / sum_j exp(z_j)`.
+- Do not put formulas in fenced code blocks, `text` blocks, or other plain-code containers unless the user explicitly asks for raw LaTeX source.
 - Any expression containing equality, fractions, sums, expectations, gradients, probabilities with conditions, losses, rewards, constraints, normalization, or multi-part subscripts must be written as block math with `$$...$$`.
 - For multi-line formulas or derivations, use `aligned` inside block math.
 - Introduce the formula before the block, then explain the important symbols after the block.
