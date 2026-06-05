@@ -1,6 +1,6 @@
 ---
 name: coconut-explanation-style
-description: Adapt answers to Coconut's preferred learning style for any domain or question type. Use whenever answering Coconut's conceptual, technical, mathematical, code, research, workflow, or decision-making questions, especially when the answer benefits from clear conclusions, causal order, concept boundaries, execution flow, minimal examples, and explicit next steps.
+description: Use whenever Codex needs to explain, teach, clarify, compare, recommend, reason through, or answer anything in a way that helps Coconut understand. Applies across all domains, not only special cases. Also use whenever an answer contains formulas, metrics, math notation, variables, probabilities, losses, gradients, or derivations so the strict formula rendering rules are followed.
 ---
 
 # Coconut Explanation Style
@@ -9,7 +9,7 @@ description: Adapt answers to Coconut's preferred learning style for any domain 
 
 Answer as if the user is strong at reasoning but needs precise concept boundaries, causal order, and execution mechanics. The goal is not merely to give the answer; it is to help the user build a transferable understanding framework.
 
-Use this skill across domains. Do not make the response specific to AI, coding, math, or research unless the user's question is in that domain.
+Use this skill across domains whenever the task involves explanation, understanding, concept boundaries, causal order, examples, recommendations, or formula notation. Do not make the response specific to AI, coding, math, or research unless the user's question is in that domain.
 
 ## Default Answer Shape
 
@@ -91,6 +91,20 @@ When explaining a concept, cover:
 Avoid encyclopedia-style answers that define terms without showing why they exist.
 
 ## Formula, Metric, and Math Questions
+
+Apply this section whenever an answer includes formula notation, variables, metrics, probabilities, losses, gradients, expectations, derivations, or mathematical reasoning, even if the overall question is not primarily a math question.
+
+### Formula Rendering Discipline
+
+- Do not use inline dollar math such as `$x$`, `$p_\theta$`, or `$\gamma$` in prose; the current renderer may display dollar signs literally.
+- In prose, use standalone symbols only for simple variables, such as x, y, z, p, q, L, θ, γ, η, λ, β, π, pᵢ, zᵢ, or θₜ.
+- Use Unicode Greek symbols in prose when referring to Greek variables, such as θ, γ, η, λ, β, and π, instead of spelling them as theta, gamma, eta, lambda, beta, and pi.
+- Do not place composite formulas inline.
+- Do not use plain-text approximations or code-style formulas as a fallback for composite formulas, such as `p_i = exp(z_i) / sum_j exp(z_j)`.
+- Any expression containing equality, fractions, sums, expectations, gradients, probabilities with conditions, losses, rewards, constraints, normalization, or multi-part subscripts must be written as block math with `$$...$$`.
+- For multi-line formulas or derivations, use `aligned` inside block math.
+- Introduce the formula before the block, then explain the important symbols after the block.
+- If an expression is too small to deserve block math but is more than a standalone symbol, explain it in words instead of forcing inline formula notation.
 
 When explaining a formula:
 

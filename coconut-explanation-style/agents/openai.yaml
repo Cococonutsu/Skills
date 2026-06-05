@@ -1,7 +1,7 @@
 interface:
   display_name: "Coconut Explanation Style"
-  short_description: "Answer with clear boundaries and examples"
-  default_prompt: "Use $coconut-explanation-style to answer my question with clear boundaries, causal order, and minimal examples."
+  short_description: "Explain anything with clear reasoning"
+  default_prompt: "Use $coconut-explanation-style to explain this with causal order, clear boundaries, examples, and strict block-math formula formatting."
 
 policy:
   allow_implicit_invocation: true
